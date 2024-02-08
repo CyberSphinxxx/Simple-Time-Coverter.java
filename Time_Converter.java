@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class WheresMyJeepney {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
-		
-		System.out.println("Please Enter The Number Of Seconds Here");
-		
-		int s = sc .nextInt();
-		int h = s / 3600;
-		int m = s % 3600 / 60;
-		int s2 = s % 3600 % 60;
-		
-		System.out.println("is");
-		System.out.println(h + " Hours " + m + " Minutes " + s2 + " Seconds)");
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Please enter the number of seconds:");
+
+        int totalSeconds = scanner.nextInt();
+        int hours = totalSeconds / 3600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+        
+        System.out.println("The time in hours, minutes, and seconds is:");
+        System.out.printf("%d Hours %d Minutes %d Seconds\n", hours, minutes, seconds);
+    }
 }
